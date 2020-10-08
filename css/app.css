@@ -1,0 +1,448 @@
+body, input, select, textarea, button {
+    font: 11pt 'calibri';
+}
+
+/* layout ----------------------------------------------------------------------------------------- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+footer {
+    background: #ccc;
+    padding: 10px 50px;
+    flex: 0 0 auto; 
+}
+
+header h1.header {
+    margin: 0;
+    margin-bottom: 5px;
+    background: url(/image/favicon.png) no-repeat left center;
+    padding-left: 70px;
+}
+
+header h1.header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav.header-nav {
+    background: #999;
+    padding: 0 50px;
+    flex: 0 0 auto; 
+    display: flex;
+}
+
+nav.header-nav a {
+    text-decoration: none;
+    background: #666;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+nav.header-nav a:hover {
+    background: #333;
+}
+
+main {
+    padding: 20px 50px;
+    flex: 1 1 auto;
+}
+
+main h1 {
+    margin-top: 0;
+}
+
+p.info:not(:empty) {
+    background: #ccc;
+    padding: 5px 10px;
+    width: fit-content;
+}
+
+span.h {
+    padding-left: 5px;
+    padding-right: 10px;
+    font-size: 14pt;
+    text-transform: uppercase;
+}
+
+/* username, role & profile photo ----------------------------------------------------------------- */
+header {
+    display: flex;
+    align-items: center;
+}
+
+header div {
+    flex: 1 1 auto;
+}
+
+header img {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #666;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+/* preview image ---------------------------------------------------------------------------------- */
+/* *** NEW *** */
+[data-preview] {
+    border: 1px solid #666;
+    display: block;
+}
+
+[data-preview] input {
+    display: none;
+}
+
+[data-preview] img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+/* form ------------------------------------------------------------------------------------------- */
+.form {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 5px;
+    place-content: start start;
+    place-items: center stretch;
+}
+
+.form > label {
+    grid-column: 1;
+    background: #ccc;
+    font-weight: bold;
+    padding: 5px;
+    place-self: stretch stretch;
+}
+
+.form > div:last-child {
+    grid-column: 1 / span 3;
+}
+
+.form label {
+    margin: 0;
+}
+
+.form label  > * {
+    vertical-align: top;
+}
+
+span.error {
+    color: red;
+}
+
+form.inline {
+    border: 1px solid blue;
+    display: contents;
+}
+
+/* staff page */
+.scontrolpanel {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 5px;
+    width: 100%;
+}
+
+.scontrolpanel div {
+    display: table-row;
+    width: 100%;
+}
+
+.scontrolpanel div a {
+    display: table-cell;
+    padding: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 33%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.scontrolpanel div a:hover {
+    background: #333;
+    /* rgb(44, 29, 255); */
+}
+
+/* menu */
+input#term {
+    border: 1px solid #17a2b8;
+    border-radius: 4px;
+    text-align: left !important;
+}
+
+.menu-table {
+    display: inline-table;
+    border: 1px solid #333;
+    margin: 7px;
+    border-radius: 5px;
+}
+
+.menu-table .row {
+    display: table-row;
+}
+
+.menu-table .head {
+    background: #333;
+    color: #fff;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.menu-table .head p {
+    margin: 0 !important;
+}
+
+.menu-table .body p {
+    margin: 0 !important;   
+    padding: 5px;
+    font-size: medium;
+}
+
+.menu-table .body button {
+    width: 100%;
+    border-radius: 0;
+}
+
+.menu-table .body button:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.menu-table .body a {
+    width: 100%;
+    border-radius: 0px;
+}
+
+.menu-table img:first-child {
+    border-bottom: 1px solid #333;
+    width: 100%;
+}
+
+.menu-table img:last-child {
+    border-radius: 4px;
+    float: right;
+}
+
+#preview {
+    border: 1px solid #999;
+    display: block;
+}
+
+#preview input {
+    display: none;
+}
+
+#preview img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* table display */
+.a {
+    border: 2px solid lightgray;
+    border-collapse: collapse;
+}
+
+.a thead {
+    background: rgb(235, 235, 235);
+}   
+
+.a tbody tr td {
+    vertical-align: middle;
+}
+
+.tabledisplay {
+    display: inline-table;
+    border-collapse: separate;
+    border-spacing: 5px;
+    width: 25%;
+    height: 110px;
+}
+
+.tabledisplay a {
+    display: table-cell;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 20px;
+    vertical-align: middle;
+    width: 100%;
+    background: #ccc;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.tabledisplay div a:hover {
+    font-weight: bold;
+}
+
+.table-form input, .table-form label {
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+
+.IN-USE {
+    background: #fdf !important;
+}
+
+.AVAILABLE {
+    background: #dfd !important;
+}
+
+.IN-USE:hover {
+    transition: linear 0.2s;
+    background: #f88 !important;
+}
+
+.AVAILABLE:hover {
+    transition: linear 0.2s;
+    background: #8f8 !important;
+}
+
+span.info:not(:empty) {
+    background: #ccc;
+    padding: 5px 10px;
+    width: fit-content;
+}
+
+/* order & bill */
+div.order {
+    display: block;
+    background: #ddd;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+div.bill {
+    display: block;
+    background: #ccc;
+}
+
+div.order h3, div.bill h3 {
+    padding: 10px;
+}
+
+.form-bill label {
+    grid-column: 1;
+    background: #ccc;
+    font-weight: bold;
+    padding: 5px;
+    place-self: stretch stretch;
+}
+
+.form-bill > input {
+    margin-right: 5px;
+}
+
+.form-bill label  > * {
+    vertical-align: top;
+}
+
+/* order */
+div.order-item > * {
+    font-size: 14pt;
+    margin: 10px;
+}
+
+div.order-item > p {
+    padding: 10px;
+}
+
+div.order-item img {
+    float: left;
+    border: 1px solid gray;
+}
+
+div.menu-table p.status {
+    width: 100%;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+div.menu-table p.PENDING {
+    background: gray;
+    color: white;
+}
+
+div.menu-table p.CONFIRMED {
+    background: #007bff;
+    color: white;
+}
+
+div.menu-table p.PREPARING {
+    background: #ffc107;
+    color: black;
+}
+
+div.menu-table p.SERVED {
+    background: #28a745;
+    color: white;
+}
+
+form.order-item-form {
+    float: left;
+}
+
+form.order-item-form div label {
+    background: #fff;
+    border: 1px solid #ffc107;
+    border-radius: 4px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+form.order-item-form div input {
+    visibility: hidden;
+}
+
+form.order-item-form input#remark {
+    width: 100%;
+}
+
+form.order-item-form input:checked + label {
+    background: #ffc107;
+}
+
+/* order status */
+.table .CONFIRMED {
+    background: rgb(198, 213, 255);
+    color: black;
+}
+
+.table .PREPARING {
+    background: rgb(255, 255, 179);
+    color: black;
+}
+
+.table .SERVED {
+    background: #dfd;
+    color: black;
+}
+
+.checked {
+    filter: brightness(85%);
+}
+
+/* Reports */
+#chart {
+    border: 1px solid black;
+    background: url(/image/loader.gif) no-repeat center;
+}
